@@ -1,0 +1,209 @@
+
+body{
+    margin: 0 ;
+    padding : 0 ; 
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(6, 5, 5) ;
+
+}
+
+
+
+.container{
+    margin: 50px 40px ;
+    display: flex  ;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;  
+    /* opacity: 1; */
+    transition : 1s;
+
+}
+.title{
+    color: rgb(192, 145, 145);
+    text-align: center ;
+}
+/* 
+=====================================================================
+    la partie de title , definition et l'image de term informatique 
+======================================================================
+*/
+.partie_right  {
+    background-color: rgb(246, 246, 246);
+    width: 500px;
+    height: 500px ;
+    border : rgb(58, 54, 54) solid 1px  ; 
+    border-radius: 15px    ;
+    box-shadow: 2px 5px rgb(88, 86, 86);
+    padding: 10px ; 
+    overflow: scroll;
+   
+}
+
+.partie_right  h1{
+
+    text-align: center;
+}
+
+.difenition{
+    overflow: scroll;
+    border : black solid 1px  ; 
+    border-radius: 15px 15px ;
+    box-shadow: 2px 5px black;
+    padding: 10px ; 
+    margin: 50px ;
+}
+
+.image{
+  
+    border : black solid 1px  ; 
+    border-radius: 15px 15px ;
+    box-shadow: 2px 5px black;
+    background-color: rgb(244, 207, 207);   
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.image img {
+    width: 100% ;
+    height: 100% ;
+    border-radius: 15px 15px ;
+}
+
+
+
+/* 
+==============================================================================
+        style de liste princibale et sous liste 
+==============================================================================
+
+*/
+
+.container_list_princibale{
+    
+    background-color: rgb(255, 255, 255);
+    
+    font-size: large 20px;
+    overflow: scroll;
+    
+    border: solid 3px rgb(107, 93, 93);
+    width: 600px;
+    height: 500px;
+    border : rgb(51, 49, 49) solid 1px  ; 
+    border-radius: 15px 15px  ;
+    box-shadow: 2px 5px rgb(107, 104, 104);
+}
+
+ li{
+    margin-top: 15px ;
+ }
+
+ul ul {
+    display: none;
+}
+ul ul ul {
+    display: none;
+}
+span , li  {
+    cursor: pointer;
+}
+/* 
+    =========================================
+        style de button de liste 
+    =========================================
+*/
+.avant , .supprimer , .apres{
+    
+    float: right ; 
+    margin-left: 40px ;
+    transition : 1s;
+    
+}
+.avant:hover ,  .supprimer:hover , .apres:hover , .ferme:hover , .affiche:hover {
+    transform : scale(1.8) ; 
+}
+
+.list_principale li , .sous_list_principale li  {
+    transition : 0.5s;
+}
+
+.list_principale{
+    padding-right: 40px ;
+}
+
+/* 
+=============================================================
+==== style hover de sous list cote client et cote serveur 
+=============================================================
+
+*/
+.list_cote_server li:hover , .list_cote_clien li:hover{
+    color: blue  ;
+    transform : scale(1) ; 
+
+
+}
+
+/* 
+=================================================
+    pour faire la incremnter de liste 
+=================================================
+*/
+.list_principale{
+padding-top: 10px;
+list-style-type: none ;
+counter-reset: counter_liste_principale ;
+margin-bottom: 10px ;
+}
+
+.sous_list_principale{ 
+    list-style-type: none ;
+    counter-reset: counter_sous_list;
+}
+.list_principale>li::before{
+    counter-increment:counter_liste_principale ;
+    content: counter(counter_liste_principale , upper-roman ) ' . ';
+}
+.sous_list_principale>li::before{
+    counter-increment: counter_sous_list ;
+    content: counter(counter_liste_principale, upper-roman) '.' counter(counter_sous_list ) ' ';
+}
+/* 
+=================================================
+  style  button de changer les deux partie 
+=================================================
+*/
+.flux{ 
+    font-size: 30px;
+    color: white;
+    margin: 0 50px ;
+    transition : 2s;
+}
+.flux:hover{
+    transform : scale(1.8) ; 
+    color: rgb(124, 124, 152);
+}
+
+/* 
+=================================================
+  style  de liste de footer 
+=================================================
+*/
+#footer {
+   
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+ 
+    margin: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: rgb(45, 34, 34);
+}
+
+#footer p {
+    color: white;
+    margin: 20px ;
+}

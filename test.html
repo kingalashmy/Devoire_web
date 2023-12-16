@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/icon.png">
+    <link rel="stylesheet" href="test.css">
+    <title>Dictionnaire</title>
+</head>
+
+
+<body>
+
+    <h1 class="title">Dictionnaire des termes informatiques </h1>
+
+    <div class="container" id="container">
+    <div class="container_list_princibale">
+        <div class="main_list_principale">
+                <ul class="list_principale" id="list_principale" >
+                    <!-- deubit des list  -->
+                    <li id="web" data-langage="Developpement web">
+                         <span class="toggle affiche" onclick="afficherListe(this)"> ⧁</span>
+                          <span class="toggle ferme" hidden onclick="afficherListe(this)"> ⟏  </span> 
+                        Developpement Web  
+                           <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                <span  class="supprimer" onclick="supprimerElement(this)" > ⋫ </span>
+                                <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span>
+                                <!-- list sous sous list  -->
+                        <!-- list de developpement web  -->
+                        <!-- les elements de list developpement web  -->
+
+                        <ul class="sous_list_principale" >
+                            <li id="cote_client" data-langage="cote client"> 
+                                <span class="toggle affiche" onclick="afficherListe(this)"> ⧁</span>
+                                 <span class="toggle ferme" hidden onclick="afficherListe(this)"> ⟏  </span>
+                                  côté client 
+                                <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                <span  class="supprimer" onclick="supprimerElement(this)" > ⋫ </span>
+                                <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span>
+                                <!-- list sous sous list  -->
+                                <ul class="list_cote_clien">
+                                    <li data-langage="HTML" id="html">
+                                        
+                                            HTML
+                                         <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                        <span  class="supprimer" onclick="supprimerElement(this)" > ⋫</span>
+                                        <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span> </li>
+                                    <li  data-langage="CSS" id="css">
+                                          CSS 
+                                        <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                        <span  class="supprimer" onclick="supprimerElement(this)"  > ⋫</span>
+                                        <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span> </li>
+                                    </li>
+                                    <li  data-langage="JS" id="js">
+                                          Javascript  
+                                        <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                        <span  class="supprimer" onclick="supprimerElement(this)"  > ⋫</span>
+                                        <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span> </li>
+                                    </li>
+                                   
+                                  
+                                </ul>
+                                <!-- fin list sous sous list  -->
+
+                            </li>
+                            <li id="cote_serveur" data-langage="côté serveur">
+                                <span class="toggle affiche" onclick="afficherListe(this)"> ⧁</span>
+                                 <span class="toggle ferme" hidden onclick="afficherListe(this)"> ⟏  </span> 
+                                 côté serveur  
+                                <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                <span class="supprimer" onclick="supprimerElement(this)"> ⋫</span>
+                                <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span>
+                                <ul class="list_cote_server">
+                                    <li id="cote_serveur" data-langage="PHP">
+                                          PHP   
+                                        <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                                        <span class="supprimer" onclick="supprimerElement(this)"> ⋫</span>
+                                        <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span>
+                                </ul>
+                            </li>
+                          
+                            <!-- fin  les elements de list developpement web   -->
+                        </ul>
+                   
+                    </li>
+              
+                
+                    <li id="conception" data-langage="conception" >
+                        <span class="toggle affiche" onclick="afficherListe(this)"> ⧁</span>
+                         <span class="toggle ferme" hidden onclick="afficherListe(this)"> ⟏  </span> 
+                           Conception 
+                          <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                           <span  class="supprimer" onclick="supprimerElement(this)"> ⋫</span>
+                           <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span></li>
+                    <li id="BDD" data-langage="BDD">
+                        <span class="toggle affiche" onclick="afficherListe(this)"> ⧁</span>
+                         <span class="toggle ferme" hidden onclick="afficherListe(this)"> ⟏  </span> 
+                           Base de donne 
+                          <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                          <span  class="supprimer" onclick="supprimerElement(this)"> ⋫</span>
+                          <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span>
+                        </li>
+                     </li>
+                    <li id="reseau" data-langage="Reseaux informatique">
+                        <span class="toggle affiche" onclick="afficherListe(this)"> ⧁</span>
+                         <span class="toggle ferme" hidden onclick="afficherListe(this)"> ⟏  </span>  
+                         Reseaux informatique 
+                     
+                         <span  class="avant" onclick="insererElement(this, 'avant')"> ⊷ </span>
+                         <span  class="supprimer" onclick="supprimerElement(this)"> ⋫</span>
+                         <span  class="apres" onclick="insererElement(this, 'apres')"> ⊶ </span></ </li>
+                    <!--
+                        =================================================
+                             fin des elements de list developpement
+                         ================================================
+                     -->
+                </ul>  
+        </div>
+    </div>
+
+    <!-- 
+      =====================================================
+            CETTE DIV POUR FAIRE LA FLUX DE L'ECHANGE
+      =====================================================
+     -->
+    <!-- les flux <==> -->
+    <div class="flux" id="flux"  hidden >
+        <span id="echangerBtn" onclick=" swapDivs()">⊲ ⊳ </span> 
+    </div>
+    <!-- 
+        =======================================================================
+        ====== CETTE PARTIE EST VIDE POUR REMPLIRE PAR JS ============
+        ===================================================================
+     -->
+  
+             <div class="partie_right" id="partie_right" hidden>
+                <h1 id="title"> </h1>
+                <div class="difenition">
+                    <p id="paragraph"></p>
+
+                </div>
+                <div class="image">
+                    <img src="" id="image" alt="">
+                </div>
+            </div> 
+    
+ </div>  <!-- FIN DE DIVE CONTAINER -->
+
+
+
+
+ <!-- 
+    =======================================================================
+    ======     CETTE DIV POUR LES NOMBRES    ==============================
+    =======================================================================
+  -->
+    <div id="footer">
+            <p>nombre de mots de paragraph : <span id="compter"></span></p>
+            <p> nombre de categorie : <span id="counter_categrie"></span></p>
+            <p>nombre moyenne de categorie : <span id="counter_moyenne_categrie"></span></p>
+    </div>
+
+    </body>
+    <script src="test.js"></script>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
